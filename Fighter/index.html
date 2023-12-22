@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fighters</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main_page.css" type="text/css">
+    <link  href="img/img3.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+   <div id="wrapper">
+      <div id="content">
+
+       
+      
+   <header>
+<div id="logo">
+<a href="https://www.ufc.com/" title="На сайт UFC">
+<img src="img/img1.png" title="UFC" alt="figter's image">
+<span>UFC TOP FIGHTERS</span>
+</a>
+</div>
+<div id="about">
+   <a href="" title="Дізнатися детальніше про рекламу">Реклама</a>
+   <a href="" title="Написати нам лист">Зворотній зв'язок</a>
+   
+</div>
+<div id="reg_auth">
+   <a href="" title="Ввійти в кабінет користувача">
+      <div class="button">Ввійти
+
+      </div>
+   </a>
+   <a href="" title="Зареєструватись">
+      <div class="button">Реєстрація
+
+      </div>
+   </a>
+
+</div>
+
+
+   </header> 
+   <nav>
+      <div id="menuShow"><img src="img/menu.png" id="icons"></div>
+      <div id="hideMenu">
+      <a href="">Новини UFC</a>
+      <a href="">Бійці</a>
+      <a href="">Рейтинг</a>
+      <a href="">Наші товари</a>
+      <a href="">Форум</a>
+      </div>
+      
+    <div id="search">
+      <span>Пошук<img src="img/search.png" id="icons"></span>
+    </div>
+
+    <div id="mobileMenu">
+      <a href="">Новини UFC</a><br>
+      <a href="">Бійці</a><br>
+      <a href="">Рейтинг</a><br>
+      <a href="">Наші товари</a><br>
+      <a href="">Форум</a>
+      <hr>
+      <a href="">Реєстрація</a>
+      <a href="">Ввійти</a>
+    </div>
+   </nav>
+
+<div id="main">
+<div id="news">
+   <h2 class="heading"> MMA новини</h2>
+   <div style="clear: both"><br></div>
+   <!-- Стаття -->
+<div class="article">
+  <img src="https://sportsgroup.ru/wp-content/uploads/2019/01/Istoriya-MMA.jpg" alt="mma" title="mma"> <br>
+<span>Що таке ММА та чому це не бої без правил</span>
+</div>
+
+<a href="" title="Переглянути більше статтей">
+   <div class="button">
+Переглянути більше 
+   </div>
+</a>
+
+</div>
+</div>
+<aside>
+<div id="courses">
+   <h2 class="heading">Навчання</h2>
+   <div style="clear: both"><br></div>
+</div>
+</aside>
+
+</div>
+   <footer>
+<div id="site_name">
+<span>FIGHTERS</span> - WORLD'S TOP 
+</div>
+<div id="clear"></div>
+<div id="footer_menu">
+   <a href="" title="Дізнатись детальніше про нас">Про нас</a>
+   <a href="" title="Дізнатись детальніше про рекламу">Реклама</a>
+   <a href="" title="Написати лист">Зворотній зв'язок</a>
+</div>
+<div id="rights">
+   <a href="">Всі права захищені &copy; <?=date ('Y')?></a>
+</div> 
+<div id="social">
+   <a href="" title="Інстаграм"><img src="img/instagram.png" title="instagram" alt="Instagram" id="icons"></a>
+   <a href="" title="Фейсбук"><img src="img/facebook.png" title="facebook" alt="Facebook" id="icons"></a>
+   <a href="" title="Наш ютуб канал"><img src="img/youtube.png" title="youtube" alt="Youtube" id="icons"></a>
+   <a href="" title="Наш телеграм канал"><img src="img/telegram.png" title="telegram" alt="Telegram" id="icons"></a>
+</div>
+   </footer>
+ </div>
+<!-- jQuery -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$('#menuShow').click (function () {  
+if ($('#mobileMenu').is(':visible'))
+$('#mobileMenu').hide ();
+else
+$('#mobileMenu').show ();
+});
+
+$(document).scroll (function () {
+   if ($(document).width() > 785){
+   if ($(document).scrollTop () > $('header').height () + 10)
+   $('nav').addClass('fixed');
+   else
+   $('nav').removeClass('fixed');
+   }
+});
+
+window.onresize = function (event) {
+   $('#mobileMenu').hide ();
+};
+</script>
+
+</body>
+</html>
